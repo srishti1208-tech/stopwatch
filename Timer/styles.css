@@ -1,0 +1,17 @@
+body{
+    background-color: #edeaff  ;
+
+}
+.stopwatch{
+    background-image: url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-right:200px ;
+    margin-left:100px ;
+
+}
