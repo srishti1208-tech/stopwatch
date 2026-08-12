@@ -1,6 +1,7 @@
 /* creating array*/ 
 let [seconds, minutes, hours] = [0,0,0];
 let displayTime = document.getElementById("displayTime");
+let timer = null;
 /**creating function for creating timer's logic */
 function stopwatch(){
     seconds++;
@@ -12,10 +13,17 @@ function stopwatch(){
             hours++;
         }
     }
+    let h = hours < 10 ? "0" + hours : hours;
+    let m = minutes < 10 ? "0" + minutes : minutes;
+    let s = seconds < 10 ? "0" + seconds : seconds;
+    displayTime.innerHTML = h + ":" + m + ":" + s;
 }
 /*Now to execute the abov function every second 
 we need to add the js function time interval */ 
 
 function watchStart(){
-    
+    if(timer!== null){
+        clearInterval(timer)
+    }
+    timer = setInterval(stopwatch, 1000);
 }
